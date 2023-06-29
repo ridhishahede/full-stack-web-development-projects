@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>DreanDorm-Student profile</title>
+
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+    		<!-- bootstrap link-->
+    	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    	  <!-- javascript link-->
+    	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    	<!-- Font Awesome link -->
+    	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+
+
+      		<link rel="preconnect" href="https://fonts.googleapis.com">
+      	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Raleway&family=Ubuntu&display=swap" rel="stylesheet">
+
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #2B3467, #243763, #BAD7E9);
+        background-size: 600% 600%;
+        animation: gradientBackground 30s ease infinite;
+      }
+
+      @keyframes gradientBackground {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      h1 {
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .profile-container {
+        max-width: 500px;
+        margin: 50px auto;
+        background-color: #212A3E;
+        padding: 20px;
+        border-radius: 10px;
+        color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+
+      .profile-container h1 {
+        font-size: 24px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .profile-details {
+        margin-top: 20px;
+      }
+
+      .profile-details ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .profile-details ul li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .profile-details ul li .icon {
+        margin-right: 10px;
+      }
+
+      .profile-details ul li span {
+        font-weight: bold;
+      }
+
+      .animated-button {
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: #B3005E;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .animated-button:hover {
+        background-color: #9BA4B5;
+      }
+
+    </style>
+
+  </head>
+
+<body>
+
+
+  		<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  		  <div class="container-fluid">
+  		    <a class="navbar-brand" href="#"  style="color: #B3005E;">DreamDorm</a>
+  		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  		      <span class="navbar-toggler-icon"></span>
+  		    </button>
+  		    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+  		      <ul class="navbar-nav">
+  						<li class="nav-item active">
+  							<a class="nav-link" href="/student/stdpage.html">Home</a>
+  						</li>
+  						<li class="nav-item">
+  							<a class="nav-link" href="#">Profile</a>
+  						</li>
+  						<li class="nav-item">
+  							<a class="nav-link" href="#">Mess Menu</a>
+  						</li>
+  						<li class="nav-item">
+  							<a class="nav-link" href="#">Cleaning Service</a>
+  						</li>
+  						<li class="nav-item">
+  							<a class="nav-link" href="#">Complaints</a>
+  						</li>
+  		      </ul>
+  		    </div>
+  		  </div>
+  		</nav>
+
+      <br>
+      <br>
+
+      <section class="jumbotron text-center">
+        <h1 class="display-4 animate__bounce"  style="color: white;">Welcome to DreamDorm</h1>
+        <p class="lead" style="color: white;">Your one-stop solution for hostel and mess management</p>
+      </section>
+
+  <div class="profile-container">
+    <h1 style="color: #B3005E;">Student Profile</h1>
+    <br>
+    <div class="profile-details">
+      <ul>
+        <li>
+          <div class="icon"><i class="fas fa-user"></i></div>
+          <div>
+            <span>Name:</span> John Doe
+          </div>
+        </li>
+        <br>
+        <li>
+          <div class="icon"><i class="fas fa-hashtag"></i></div>
+          <div>
+            <span>Roll Number:</span> ABC123
+          </div>
+        </li>
+        <br>
+        <li>
+          <div class="icon"><i class="fas fa-utensils"></i></div>
+          <div>
+            <span>Mess Allotment:</span> Mess A
+          </div>
+        </li>
+        <br>
+        <li>
+          <div class="icon"><i class="fas fa-bed"></i></div>
+          <div>
+            <span>Hostel Room:</span> 123
+          </div>
+        </li>
+        <br>
+        <li>
+          <div class="icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <span>Email:</span> john.doe@example.com
+          </div>
+        </li>
+        <br>
+        <li>
+          <div class="icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <span>Phone Number:</span> +1 123-456-7890
+          </div>
+        </li>
+        <br>
+      </ul>
+    </div>
+    <a href="#" class="animated-button">Edit Profile</a>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Queries</title>
+ 
+   <style>
+    /* Define your CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+.container{
+  max-width:1000px;
+  margin: 0 auto;
+  padding:20px;
+}
+    h1 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    table {
+      margin-left: auto;
+  margin-right: auto;
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      border-radius: 10px;
+  overflow: hidden;
+  table-layout: fixed;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th, td {
+      padding: 15px;
+      text-align: right;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #882662;
+    }
+    tbody tr:nth-child(even) {
+  background-color: #fffbfe;
+}
+
+tbody tr:hover {
+  background-color: #c866aa;
+}
+
+  </style> 
+</head>
+<body>
+  <h1>Review</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Email</th>
+        <th>message</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <% reviews.forEach(review => { %>
+        <tr>
+          <td><%= review.email %></td>
+          <td><%= review.message %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+

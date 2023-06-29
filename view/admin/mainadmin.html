@@ -1,0 +1,209 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>DreamDorm - Hostel and Mess Management Portal</title>
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<!--font awesome link -->
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Raleway&family=Ubuntu&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+	.animation-container {
+		position: relative;
+	}
+
+	.animation {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 200px;
+		height: 200px;
+		background-color: #B3005E;
+		animation: rotate 3s infinite;
+	}
+
+	@keyframes rotate {
+		0% {
+			transform: rotate(0deg);
+		}
+
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	@keyframes bounce {
+		0% {
+			transform: translateY(0);
+		}
+
+		50% {
+			transform: translateY(-20px);
+		}
+
+		100% {
+			transform: translateY(0);
+		}
+	}
+
+	h1 {
+		animation: bounce 1s;
+		font-family: 'Montserrat', sans-serif;
+		color: #B3005E;
+	}
+
+	.btn {
+		position: relative;
+		font-size: 17px;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 0.5em 1.2em;
+		display: inline-block;
+		border-radius: 6em;
+		transition: all .2s;
+		border: none;
+		font-family: inherit;
+		font-weight: 500;
+		color: black;
+		background-color: #B3005E;
+		color: white;
+	}
+
+	.btn:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	}
+
+	.btn:active {
+		transform: translateY(-1px);
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	}
+
+	.btn::after {
+		content: "";
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+		border-radius: 100px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		transition: all .4s;
+	}
+
+	.btn::after {
+		background-color: #B3005E;
+	}
+
+	.btn:hover::after {
+		transform: scaleX(1.4) scaleY(1.6);
+		opacity: 0;
+	}
+</style>
+
+<body style="background-color: #212A3E; font-family: Montserrat sans-serif;">
+	<header>
+
+		<nav class="navbar navbar-expand-lg bg-body-tertiary">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#" style="color: #B3005E;">DreamDorm</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<li class="nav-item active">
+							<a class="nav-link" style="color:white;" href="/admin/hostel">Hostel Details</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" style="color:white;" href="/admin/mess">Mess Details</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" style="color:white;" href="/admin/student">Student details</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<section class="jumbotron text-center">
+		<h1 class="display-4 animate__bounce">Welcome to DreamDorm</h1>
+		<p class="lead" style="color: #B3005E;">Your one-stop solution for hostel and mess management</p>
+	</section>
+
+	<div class="animation-container">
+		<div class="animation"></div>
+	</div>
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				<div class="card mb-4">
+					<div class="card-body">
+						<h5 class="card-title">Job Timings</h5>
+						<p class="card-text">Your job timings for today are:</p>
+						<ul  class="card-text" style="list-style-type: none;">
+							<li>8:00 AM - 10:00 AM: Cleaning</li>
+							<li>10:00 AM - 12:00 PM: Reception duty</li>
+							<li>1:00 PM - 3:00 PM: Mess duty</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				<div class="card mb-4">
+					<div class="card-body">
+						<h5 class="card-title">Profile</h5>
+						<p class="card-text">Check your personal details</p>
+						<a href="#"><button class="btn"> View </button></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				<div class="card mb-4">
+					<div class="card-body">
+						<h5 class="card-title">Student Queries</h5>
+						<p class="card-text">Check students queries</p>
+						<a href="/admin/studentqueries.html"><button class="btn"> View </button></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				<div class="card mb-4">
+					<div class="card-body">
+						<h5 class="card-title">Attendance</h5>
+						<p class="card-text">Click the button below to check your attendance:</p>
+						<a href="#"><button class="btn"> Check Attendance </button></a>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+
+	<footer id="footer" style="color: white; text-align: center; margin-top: 70px; margin-bottom: 0px;">
+
+		<i class="social-icon fa-brands fa-facebook icon"></i>
+		<i class="social-icon fa-brands fa-twitter icon"></i>
+		<i class="social-icon fa-brands fa-instagram icon"></i>
+		<i class="social-icon fa-solid fa-envelope icon"></i>
+		<p>© Copyright DreamDorm</p>
+
+	</footer> {% endcomment %}

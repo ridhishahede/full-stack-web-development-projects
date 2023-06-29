@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complaint Form</title>
+
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  	<!--font awesome link -->
+  	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+
+  	<link rel="preconnect" href="https://fonts.googleapis.com">
+  	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Raleway&family=Ubuntu&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-control:focus {
+      border-color: #B3005E;
+      box-shadow: none;
+    }
+
+    .btn {
+  		position: relative;
+  		font-size: 17px;
+  		text-transform: uppercase;
+  		text-decoration: none;
+  		padding: 0.5em 1.2em;
+  		display: inline-block;
+  		border-radius: 6em;
+  		transition: all .2s;
+  		border: none;
+  		font-family: inherit;
+  		font-weight: 500;
+  		color: black;
+  		background-color: #B3005E;
+  		color: white;
+  	}
+
+  	.btn:hover {
+  		transform: translateY(-3px);
+  		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  	}
+
+  	.btn:active {
+  		transform: translateY(-1px);
+  		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  	}
+
+  	.btn::after {
+  		content: "";
+  		display: inline-block;
+  		height: 100%;
+  		width: 100%;
+  		border-radius: 100px;
+  		position: absolute;
+  		top: 0;
+  		left: 0;
+  		z-index: -1;
+  		transition: all .4s;
+  	}
+
+  	.btn::after {
+  		background-color: #B3005E;
+  	}
+
+  	.btn:hover::after {
+  		transform: scaleX(1.4) scaleY(1.6);
+  		opacity: 0;
+  	}
+  </style>
+</head>
+
+<body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="form-container">
+            <h2>Complaint Form</h2>
+            <form action="/complaint" method="POST">
+              <div class="mb-3">
+                <label for="date">Date of Complaint</label>
+                    <input type="date" class="form-control" id="date" name="date" required>
+                </div>
+                <div class="mb-3">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="description">Complaint Description</label>
+                  <textarea class="form-control" id="description" name="description" rows="5" required></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="complaint-about">Complaint About</label>
+                  <input type="text" class="form-control" id="complaint-about" name="complaintAbout" required>
+                </div>
+                <button type="submit" class="btn btn-submit btn-block">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    
+    </html>  

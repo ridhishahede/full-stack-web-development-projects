@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DreamDorm - Mess menu</title>
+
+
+        		<!-- bootstrap link-->
+        	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+        	  <!-- javascript link-->
+        	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+        	<!-- Font Awesome link -->
+        	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+
+
+          		<link rel="preconnect" href="https://fonts.googleapis.com">
+          	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Raleway&family=Ubuntu&display=swap" rel="stylesheet">
+
+<style media="screen">
+
+body {
+  text-align: center;
+  background-color: #243763;
+  font-family: Montserrat sans-serif;
+}
+
+.btn {
+font-size: 18px;
+display: inline-block;
+outline: 0;
+border: 0;
+cursor: pointer;
+will-change: box-shadow,transform;
+background: radial-gradient( 100% 100% at 100% 0%, #DB005B 0%, #B3005E 100% );
+box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+padding: 0 2em;
+border-radius: 0.3em;
+color: #fff;
+height: 2.6em;
+text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px DB005B;
+transform: translateY(-0.1em);
+}
+
+.btn:active {
+box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
+transform: translateY(0em);
+}
+
+.container {
+  background-color: #212A3E;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #FFE3E1;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 80%);
+  transform: rotate(-45deg);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #212A3E;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #555;
+}
+</style>
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"  style="color: #B3005E;">DreamDorm</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Mess Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cleaning Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Complaints</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <br>
+    <br>
+
+    <section class="jumbotron text-center">
+      <h1 class="display-4 animate__bounce" style="color: #B3005E; font-weight: 500;">Welcome to DreamDorm</h1>
+      <p class="lead" style="color: #B3005E; font-weight: 500;">Mess Menu</p>
+    </section>
+<br>
+    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+  <label class="btn" for="btnradio1">Mess 1</label>
+
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+  <label class="btn" for="btnradio2">Mess 2</label>
+
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+  <label class="btn" for="btnradio3">Mess 3</label>
+</div>
+<br>
+<br>
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <h5 class="card-title">Thursday's Menu</h5><br>
+                      <p class="card-text"><i>Breakfast</i> 7:00am to 9:30am - set dosa,sambar,chutney,bread,jam,butter,tea,coffee,milk</p> <br>
+                      <p class="card-text"><i>Lunch</i> 12:00pm to 2:00pm - Chole, puri, rice, rasam, dal, curd, pickle, papad, ice-cream</p> <br>
+                      <p class="card-text"><i>Snacks</i> 4:30pm to 6:00pm - Samosa, red sauce,bread,jam,butter,tea,coffee,milk</p> <br>
+                      <p class="card-text"><i>Dinner</i> 7:30pm to 9:30pm - egg curry, oil chapati, dry chapati, rice, rasam, sambar, curd</p>  <br>            </div>
+                </div>
+              </div>
+              <h5 class="card-title">Monday's Menu</h5><br>
+                <p class="card-text"><i>Breakfast</i> 7:00am to 9:30am - vada,sambar,chutney,bread,jam,butter,tea,coffee,milk</p> <br>
+                <p class="card-text"><i>Lunch</i> 12:00pm to 2:00pm - Chole, puri, rice, rasam, dal, curd, pickle, papad, ice-cream</p> <br>
+                <p class="card-text"><i>Snacks</i> 4:30pm to 6:00pm - Samosa, red sauce,bread,jam,butter,tea,coffee,milk</p> <br>
+                <p class="card-text"><i>Dinner</i> 7:30pm to 9:30pm - egg curry, oil chapati, dry chapati, rice, rasam, sambar, curd</p>  <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Tuesday's Menu</h5><br>
+                <p class="card-text"><i>Breakfast</i> 7:00am to 9:30am - masala dosa,sambar,chutney,bread,jam,butter,tea,coffee,milk</p> <br>
+                <p class="card-text"><i>Lunch</i> 12:00pm to 2:00pm - moong dal,dry chapati,oil chapati, rice, rasam, dal, curd, pickle, papad, ice-cream</p> <br>
+                <p class="card-text"><i>Snacks</i> 4:30pm to 6:00pm - Samosa, red sauce,bread,jam,butter,tea,coffee,milk</p> <br>
+                <p class="card-text"><i>Dinner</i> 7:30pm to 9:30pm - chicken biryani, paneer biryani, veg masala, oil chapati, dry chapati, rice, rasam, sambar, curd</p>  <br>            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Wednesday's Menu</h5><br>
+                <p class="card-text"><i>Breakfast</i> 7:00am to 9:30am - set dosa,sambar,chutney,bread,jam,butter,tea,coffee,milk</p> <br>
+                <p class="card-text"><i>Lunch</i> 12:00pm to 2:00pm - aloo mutter, veg dry,dry chapati, oil chapati, rice, rasam, dal, curd, pickle, papad, ice-cream</p> <br>
+                <p class="card-text"><i>Snacks</i> 4:30pm to 6:00pm - pani puri, red sauce,bread,jam,butter,tea,coffee,milk</p> <br>
+                <p class="card-text"><i>Dinner</i> 7:30pm to 9:30pm - babycorn masala, oil chapati, dry chapati, rice, rasam, sambar, curd</p>  <br>            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Friday's Menu</h5><br>
+                <p class="card-text"><i>Breakfast</i> 7:00am to 9:30am - puri,aloo sabji,bread,jam,butter,tea,coffee,milk</p> <br>
+                <p class="card-text"><i>Lunch</i> 12:00pm to 2:00pm - Cabbage sabji,dry chapati, oil chapati, rice, rasam, dal, curd, pickle, papad, ice-cream</p> <br>
+                <p class="card-text"><i>Snacks</i> 4:30pm to 6:00pm - onion pakoda, red sauce,bread,jam,butter,tea,coffee,milk</p> <br>
+                <p class="card-text"><i>Dinner</i> 7:30pm to 9:30pm - chicken masala,mushroom masala, oil chapati, dry chapati, rice, rasam, sambar, curd</p>  <br>            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Saturday's Menu</h5><br>
+                <p class="card-text"><i>Breakfast</i> 7:00am to 9:30am - dosa,sambar,chutney,bread,jam,butter,tea,coffee,milk</p> <br>
+                <p class="card-text"><i>Lunch</i> 12:00pm to 2:00pm - Chole, puri, rice, rasam, dal, curd, pickle, papad, ice-cream</p> <br>
+                <p class="card-text"><i>Snacks</i> 4:30pm to 6:00pm - egg puff,veg puff, red sauce,bread,jam,butter,tea,coffee,milk</p> <br>
+                <p class="card-text"><i>Dinner</i> 7:30pm to 9:30pm - soya chunks masala,chicken kabab,paneer 65, oil chapati, dry chapati, rice, rasam, sambar, curd</p>  <br>            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Sunday's Menu</h5><br>
+                <p class="card-text"><i>Breakfast</i> 7:00am to 9:30am - aloo parantha,curd,green chutney,bread,jam,butter,tea,coffee,milk</p> <br>
+                <p class="card-text"><i>Lunch</i> 12:00pm to 2:00pm - beetroot sabji,dry chapati, oil chapati, rice, rasam, dal, curd, pickle, papad, ice-cream</p> <br>
+                <p class="card-text"><i>Snacks</i> 4:30pm to 6:00pm - mangalore bhaji, green chutney,bread,jam,butter,tea,coffee,milk</p> <br>
+                <p class="card-text"><i>Dinner</i> 7:30pm to 9:30pm - egg curry, oil chapati, dry chapati, rice, rasam, sambar, curd</p>  <br>            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+  </body>
+</html>

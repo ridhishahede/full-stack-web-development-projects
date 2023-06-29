@@ -1,0 +1,80 @@
+<!-- menu.ejs -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mess Menu</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    /* Table Styles */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background-color: #f1e8ef;
+    }
+  
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #a22ba4;
+    }
+  
+    /* Hover effect */
+    tbody tr:hover {
+      background-color: #7c355a;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mess Menu</h1>
+
+  <form action="/admin/menu/add" method="POST">
+    <label for="day">Day:</label>
+    <input type="text" name="day" id="day" required>
+
+    <label for="breakfastMenu">Breakfast Menu:</label>
+    <textarea name="breakfastMenu" id="breakfastMenu" required></textarea>
+
+    <label for="lunchMenu">Lunch Menu:</label>
+    <textarea name="lunchMenu" id="lunchMenu" required></textarea>
+    
+    <label for="lunchMenu">Snacks Menu:</label>
+    <textarea name="snacksMenu" id="snacksMenu" required></textarea>
+
+    <label for="dinnerMenu">Dinner Menu:</label>
+    <textarea name="dinnerMenu" id="dinnerMenu" required></textarea>
+
+    <button type="submit">Add Menu</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>Breakfast Menu</th>
+        <th>Lunch Menu</th>
+        <th>Snacks Menu</th>
+        <th>Dinner Menu</th>
+        <th>Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% menus.forEach(menu => { %>
+        <tr>
+          <td><%= menu.day %></td>
+          <td><%= menu.breakfastMenu %></td>
+          <td><%= menu.lunchMenu %></td>
+          <td><%= menu.snacksMenu %></td>
+          <td><%= menu.dinnerMenu %></td>
+          <td>
+            <form action="/admin/menu/remove" method="POST">
+              <input type="hidden" name="id" value="<%= menu._id %>">
+              <button type="submit">Remove</button>
+            </form>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>

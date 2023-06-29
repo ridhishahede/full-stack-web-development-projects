@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hostel and Mess Management Portal</title>
+
+
+        <!-- bootstrap link-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+        <!-- javascript link-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+
+    <style>
+        .container {
+            max-width: 400px;
+            background-color: aliceblue;
+            border-radius: 5rem;
+            margin: 100px auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 1.4rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(0, 0, 0, 0.25);
+            gap: 0.75rem;
+            color: rgb(65, 63, 63);
+            background-color: #fff;
+            cursor: pointer;
+            transition: all .6s ease;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .button svg {
+            height: 24px;
+        }
+
+        .button:hover {
+            transform: scale(1.02);
+        }
+
+        .cube-loader {
+position: relative;
+/* u can choose any size */
+width: 75px;
+height: 75px;
+transform-style: preserve-3d;
+transform: rotateX(-30deg);
+animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+0% {
+transform: rotateX(-30deg) rotateY(0);
+}
+
+100% {
+transform: rotateX(-30deg) rotateY(360deg);
+}
+}
+
+.cube-loader .cube-wrapper {
+position: absolute;
+width: 100%;
+height: 100%;
+/* top: 0;
+left: 0; */
+transform-style: preserve-3d;
+}
+
+.cube-loader .cube-wrapper .cube-span {
+position: absolute;
+width: 100%;
+height: 100%;
+/* top: 0;
+left: 0; */
+                                 /* width 75px / 2 = 37.5px */
+transform: rotateY(calc(90deg * var(--i))) translateZ(37.5px);
+background: linear-gradient(
+to bottom,
+hsl(330, 3.13%, 25.1%) 0%,
+hsl(177.27, 21.71%, 32.06%) 5.5%,
+hsl(176.67, 34.1%, 36.88%) 12.1%,
+hsl(176.61, 42.28%, 40.7%) 19.6%,
+hsl(176.63, 48.32%, 43.88%) 27.9%,
+hsl(176.66, 53.07%, 46.58%) 36.6%,
+hsl(176.7, 56.94%, 48.91%) 45.6%,
+hsl(176.74, 62.39%, 50.91%) 54.6%,
+hsl(176.77, 69.86%, 52.62%) 63.4%,
+hsl(176.8, 76.78%, 54.08%) 71.7%,
+hsl(176.83, 83.02%, 55.29%) 79.4%,
+hsl(176.85, 88.44%, 56.28%) 86.2%,
+hsl(176.86, 92.9%, 57.04%) 91.9%,
+hsl(176.88, 96.24%, 57.59%) 96.3%,
+hsl(176.88, 98.34%, 57.93%) 99%,
+hsl(176.89, 99.07%, 58.04%) 100%
+);
+}
+
+.cube-top {
+position: absolute;
+width: 75px;
+height: 75px;
+background: hsl(330, 3.13%, 25.1%) 0%;
+                  /* width 75px / 2 = 37.5px */
+transform: rotateX(90deg) translateZ(37.5px);
+transform-style: preserve-3d;
+}
+
+.cube-top::before {
+content: '';
+position: absolute;
+/* u can choose any size */
+width: 75px;
+height: 75px;
+background: hsl(176.61, 42.28%, 40.7%) 19.6%;
+transform: translateZ(-90px);
+filter: blur(10px);
+box-shadow: 0 0 10px #323232,
+          0 0 20px hsl(176.61, 42.28%, 40.7%) 19.6%,
+          0 0 30px #323232,
+          0 0 40px hsl(176.61, 42.28%, 40.7%) 19.6%;
+}
+
+.form {
+background-color: #fff;
+display: inline-block;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+padding: 1rem;
+max-width: 350px;
+border-radius: 0.5rem;
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+font-size: 1.25rem;
+line-height: 1.75rem;
+font-weight: 600;
+text-align: center;
+color: #000;
+}
+
+.input-container {
+position: relative;
+}
+
+.input-container input, .form button {
+outline: none;
+border: 1px solid #e5e7eb;
+margin: 8px 0;
+}
+
+.input-container input {
+background-color: #fff;
+padding: 1rem;
+padding-right: 3rem;
+font-size: 0.875rem;
+line-height: 1.25rem;
+width: 300px;
+border-radius: 0.5rem;
+box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.submit {
+display: block;
+padding-top: 0.75rem;
+padding-bottom: 0.75rem;
+padding-left: 1.25rem;
+padding-right: 1.25rem;
+background-color: #212A3E;
+color: #ffffff;
+font-size: 0.875rem;
+line-height: 1.25rem;
+font-weight: 500;
+width: 100%;
+border-radius: 0.5rem;
+text-transform: uppercase;
+}
+
+.signup-link {
+color: #6B7280;
+font-size: 0.875rem;
+line-height: 1.25rem;
+text-align: center;
+}
+
+.signup-link a {
+text-decoration: underline;
+}
+
+    </style>
+
+</head>
+
+<body style="text-align: center; background-color: #212A3E;">
+    <div style="text-align: center;">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <h1 style="margin: 80px auto; color: white;">Welcome to the DreamDorm Portal</h1>
+            <div class="cube-loader">
+                <div class="cube-top"></div>
+                <div class="cube-wrapper">
+                    <span style="--i:0" class="cube-span"></span>
+                    <span style="--i:1" class="cube-span"></span>
+                    <span style="--i:2" class="cube-span"></span>
+                    <span style="--i:3" class="cube-span"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <div style="display: block; text-align: center;	margin-top: 80px;">
+        <form class="form" action="/login" method="Post">
+             <p class="form-title">Sign in to your account</p>
+             
+             <div class="input-container">
+                    <input type="number" name="id" placeholder="Enter digits">
+                    <span>
+                    </span>
+            </div>
+            <div class="input-container">
+                    <input type="password" name="password" placeholder="Enter password">
+                </div>
+                 <button type="submit" class="submit">
+                Sign in
+            </button>
+
+            <button class="button">
+                <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 262">
+                    <path fill="#4285F4" d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"></path>
+                    <path fill="#34A853" d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"></path>
+                    <path fill="#FBBC05" d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"></path>
+                    <path fill="#EB4335" d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"></path>
+                </svg>
+                Continue with Google
+            </button>
+
+            <p class="signup-link">
+                No account?
+                <a href="">Sign up</a>
+            </p>
+     </form>
+    </div>
+    <br>
+    <br>
+    <br>
+
+</body>
+
+</html>
